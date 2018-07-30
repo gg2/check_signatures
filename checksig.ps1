@@ -7,6 +7,10 @@ param (
 
 # Runs on Windows 10, Powershell 5.1
 
+# Example usage(s):
+#   .\checksig.ps1 -filename .\ProgramFilename.exe -sigfile .\SignatureFilename.txt -hashtype SHA256 -v
+#   .\checksig.ps1 -sigfile SignatureFilename.txt -filename ProgramFilename.exe
+
 # TODO: make sure that quoted filenames and filenames with spaces work
 # TODO: accept either a file containing a signature to compare, or the signature directly
 
