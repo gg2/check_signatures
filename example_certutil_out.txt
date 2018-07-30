@@ -1,0 +1,3 @@
+SHA1 hash of Programmo-SHA256.txt:
+10462a65e94b0f0ce6aa1505549a2727fa803c96
+CertUtil: -hashfile command completed successfully.
