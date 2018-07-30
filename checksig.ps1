@@ -50,13 +50,14 @@ if ( $_VERBOSE )
 }
 
 # Generate the signature of the file
-$_OUT_CERTUTIL = CertUtil -hashfile $FILENAME $HASHTYPE
+$_OUT_CERTUTIL = (Get-FileHash -Path $FILENAME -Algorithm $HASHTYPE).Hash
 # Check status of CertUtil
 if ( $? )
 {
 	# Strip the generated signature from the output, and remove any whitespace
-	$SIG_F = $_OUT_CERTUTIL | Select-Object -Index 1
-	$SIG_F = $SIG_F -replace '\s',''
+	#$SIG_F = $_OUT_CERTUTIL | Select-Object -Index 1
+	#$SIG_F = $SIG_F -replace '\s',''
+	$SIG_F = $_OUT_CERTUTIL -replace '\s',''
 	# Get the signature to verify against, and remove any whitespace
 	$SIG_O = Get-Content -path $SIGFILE
 	$SIG_O = $SIG_O -replace '\s',''

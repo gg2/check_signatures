@@ -13,7 +13,7 @@ Each script accepts 4 parameters in any order, accompanied by appropriate flags:
   False == output only a statement of the result
 
 
-Currently only tested on **Windows 10**. I opted to stick with CertUtil for the Powershell script, instead of using the Get-FileHash commandlet, because the output from Get-FileHash is even more involved than that from CertUtil. (Apparently it's difficult to just return a hash directly without commentary and notation.)
+Currently only tested on **Windows 10**. I opted for the Get-FileHash commandlet for the Powershell script, instead of using CertUtil, since it turned out to be easy to fetch the hash from it.
 
 
 * **TODO**: Need to make sure all three run smoothly with or without quotes around path/filenames, and if path/filenames contain spaces.
